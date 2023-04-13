@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Route, createBrowserRouter } from "react-router-dom";
 
 import App from "./App";
 import SignIn from "./SignIn";
@@ -11,11 +11,11 @@ const router = createBrowserRouter([
     // errorElement: <UserErrorPage />,
   },
   {
-    path: "/sign-in",
+    path: "/login",
     element: <SignIn />,
   },
   {
-    path: "/user",
+    path: "/profile",
     element: <User />,
   },
 ]);
