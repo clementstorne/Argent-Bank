@@ -1,23 +1,26 @@
-import { Route, createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import App from "./App";
 import SignIn from "./SignIn";
 import User from "./User";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    // errorElement: <UserErrorPage />,
-  },
-  {
-    path: "/login",
-    element: <SignIn />,
-  },
-  {
-    path: "/profile",
-    element: <User />,
-  },
-]);
+import AuthGuard from "../components/AuthGuard";
 
-export default router;
+export default function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/login" element={<SignIn />} />
+        <Route
+          path="/profile"
+          element={
+            <AuthGuard>
+              <User />
+            </AuthGuard>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
+  );
+}
