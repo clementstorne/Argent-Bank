@@ -1,23 +1,27 @@
+/** Style */
 import "../main.scss";
 
+/** React */
 import { useEffect } from "react";
-import { useSelector, useDispatch } from "react-redux";
 
+/** Store */
+import { useDispatch } from "react-redux";
+import { userLogin } from "../store/userSlice";
+
+/** Services */
+import UserService from "../services/UserService";
+
+/** Components */
 import Navbar from "../components/Navbar";
 import Account from "../components/Account";
 import Footer from "../components/Footer";
-
-import UserService from "../services/UserService";
-import { userLogin } from "../store/features/userSlice";
+import Header from "../components/Header";
 
 export default function User() {
   const dispatch = useDispatch();
-  const token = useSelector((state) => state.login.token);
-  const firstName = useSelector((state) => state.user.firstName);
-  const lastName = useSelector((state) => state.user.lastName);
 
   useEffect(() => {
-    UserService.getUserData(token)
+    UserService.getUserData()
       .then((res) => {
         dispatch(userLogin(res.data));
       })
@@ -30,14 +34,7 @@ export default function User() {
     <>
       <Navbar />
       <main className="main bg-dark">
-        <div className="header">
-          <h1>
-            Welcome back
-            <br />
-            {firstName} {lastName}!
-          </h1>
-          <button className="edit-button">Edit Name</button>
-        </div>
+        <Header />
         <h2 className="sr-only">Accounts</h2>
         <Account
           title="Argent Bank Checking (x8349)"

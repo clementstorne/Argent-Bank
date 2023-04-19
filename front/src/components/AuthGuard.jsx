@@ -1,12 +1,13 @@
+/** React Router */
 import { Navigate } from "react-router-dom";
-import { useSelector } from "react-redux";
+
+/** Services */
+import AuthService from "../services/AuthService";
 
 export default function AuthGuard({ children }) {
-  const isAuth = useSelector((state) => state.login.isAuth);
-
+  const isAuth = AuthService.isLogged();
   if (!isAuth) {
     return <Navigate to="/login" />;
   }
-
   return children;
 }

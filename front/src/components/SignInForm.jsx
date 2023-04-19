@@ -1,13 +1,18 @@
+/** Style */
 import "../main.scss";
 
+/** React */
 import { useState } from "react";
+
+/** React Router */
 import { useNavigate } from "react-router-dom";
 
+/** Store */
 import { useDispatch } from "react-redux";
+import { userLogin } from "../store/userSlice";
 
+/** Services */
 import AuthService from "../services/AuthService";
-
-import { login } from "../store/features/loginSlice";
 
 export default function SignInForm() {
   const dispatch = useDispatch();
@@ -27,7 +32,7 @@ export default function SignInForm() {
     AuthService.login(credentials)
       .then((res) => {
         AuthService.saveToken(res.data.body.token);
-        dispatch(login(res.data));
+        dispatch(userLogin(res.data));
         navigate("/profile");
       })
       .catch((err) => {

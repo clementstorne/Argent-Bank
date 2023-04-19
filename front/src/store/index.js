@@ -1,11 +1,12 @@
+/** Redux Toolkit */
 import { configureStore } from "@reduxjs/toolkit";
-import { userReducer } from "./features/userSlice";
-import { loginReducer } from "./features/loginSlice";
+
+/** Slices */
+import { userReducer } from "./userSlice";
 
 export default configureStore({
   reducer: {
     user: userReducer,
-    login: loginReducer,
   },
   devTools: true,
 });

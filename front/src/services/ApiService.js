@@ -1,10 +1,10 @@
-import axios from "axios";
-
-axios.defaults.baseURL = "http://localhost:3000";
-let token = localStorage.getItem("token");
-axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-
+/**
+ * Service for API calls.
+ */
 class ApiService {
+  /**
+   * The URL of the API.
+   */
   static url = "http://localhost:3001/api/v1/user";
 }
 

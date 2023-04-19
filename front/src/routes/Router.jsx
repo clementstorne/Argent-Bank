@@ -1,9 +1,12 @@
+/** React Router */
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+/** Views */
 import App from "./App";
 import SignIn from "./SignIn";
 import User from "./User";
 
+/** Components */
 import AuthGuard from "../components/AuthGuard";
 
 export default function Router() {
