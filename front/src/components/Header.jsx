@@ -3,7 +3,7 @@ import "../main.scss";
 
 /** Store */
 import { useSelector, useDispatch } from "react-redux";
-import { userToUpdate } from "../store/userSlice";
+import { userToUpdateToggle } from "../store/userSlice";
 
 /** Components */
 import UpdateForm from "../components/UpdateForm";
@@ -17,7 +17,7 @@ export default function Header() {
 
   function handleUserUpdate(e) {
     e.preventDefault();
-    dispatch(userToUpdate());
+    dispatch(userToUpdateToggle());
   }
 
   return (

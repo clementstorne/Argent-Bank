@@ -6,7 +6,7 @@ import { useState } from "react";
 
 /** Store */
 import { useSelector, useDispatch } from "react-redux";
-import { userUpdate, userToUpdate } from "../store/userSlice";
+import { userUpdate, userToUpdateToggle } from "../store/userSlice";
 
 /** Services */
 import UserService from "../services/UserService";
@@ -39,7 +39,7 @@ export default function UpdateForm() {
   function cancel(e) {
     e.preventDefault();
 
-    dispatch(userToUpdate());
+    dispatch(userToUpdateToggle());
   }
 
   return (
