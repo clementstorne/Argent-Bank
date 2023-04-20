@@ -44,7 +44,8 @@ npm run dev:server
 Si tout se passe bien, le message suivant devrait s'afficher dans le terminal :
 
 ```
-xxx
+Server listening on http://localhost:3001
+Database successfully connected
 ```
 
 Pour peupler l'API, utilisez la commande suivante :
