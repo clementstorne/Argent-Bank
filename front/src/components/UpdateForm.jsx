@@ -11,6 +11,10 @@ import { userUpdate, userToUpdateToggle } from "../store/userSlice";
 /** Services */
 import UserService from "../services/UserService";
 
+/**
+ * Component for showing the form to update user's profile.
+ * @component
+ */
 export default function UpdateForm() {
   const dispatch = useDispatch();
   const firstNameStored = useSelector((state) => state.user.firstName);

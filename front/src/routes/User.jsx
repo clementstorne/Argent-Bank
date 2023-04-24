@@ -17,6 +17,10 @@ import Account from "../components/Account";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 
+/**
+ * Component for showing the user's page.
+ * @component
+ */
 export default function User() {
   const dispatch = useDispatch();
 

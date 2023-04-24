@@ -8,6 +8,10 @@ import { userToUpdateToggle } from "../store/userSlice";
 /** Components */
 import UpdateForm from "../components/UpdateForm";
 
+/**
+ * Component for showing the header.
+ * @component
+ */
 export default function Header() {
   const dispatch = useDispatch();
 

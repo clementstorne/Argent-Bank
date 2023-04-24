@@ -7,6 +7,13 @@ import CurrencyHelpers from "../helpers/CurrencyHelpers";
 /** PropTypes */
 import PropTypes from "prop-types";
 
+/**
+ * Component for showing an account on user's page.
+ * @component
+ * @param   {String}  props.title        The title of the account.
+ * @param   {Number}  props.amount       The amount of the account.
+ * @param   {String}  props.description  The description of the account.
+ */
 export default function Account(props) {
   return (
     <section className="account">

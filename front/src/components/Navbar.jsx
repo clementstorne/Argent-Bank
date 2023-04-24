@@ -18,6 +18,10 @@ import AuthService from "../services/AuthService";
 /** Assets */
 import logo from "../assets/argentBankLogo.png";
 
+/**
+ * Component for showing the navbar.
+ * @component
+ */
 export default function Navbar() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

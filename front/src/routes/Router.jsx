@@ -9,6 +9,10 @@ import User from "./User";
 /** Components */
 import AuthGuard from "../components/AuthGuard";
 
+/**
+ * The router component.
+ * @component
+ */
 export default function Router() {
   return (
     <BrowserRouter>

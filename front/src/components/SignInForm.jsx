@@ -14,6 +14,10 @@ import { userLogin } from "../store/userSlice";
 /** Services */
 import AuthService from "../services/AuthService";
 
+/**
+ * Component for showing the form to sign in.
+ * @component
+ */
 export default function SignInForm() {
   const dispatch = useDispatch();
   const navigate = useNavigate();

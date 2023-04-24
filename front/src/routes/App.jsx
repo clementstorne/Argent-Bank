@@ -11,6 +11,10 @@ import IconChat from "../assets/icon-chat.png";
 import IconMoney from "../assets/icon-money.png";
 import IconSecurity from "../assets/icon-security.png";
 
+/**
+ * Component for showing the main page.
+ * @component
+ */
 export default function App() {
   return (
     <>

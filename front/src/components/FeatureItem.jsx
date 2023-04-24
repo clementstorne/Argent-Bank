@@ -4,6 +4,13 @@ import "../main.scss";
 /** PropTypes */
 import PropTypes from "prop-types";
 
+/**
+ * Component for showing a feature section on the main page.
+ * @param   {String}      props.title  The title of the section.
+ * @param   {MediaImage}  props.icon   The icon of the section.
+ * @param   {String}      props.text   The text content of the section.
+ * @component
+ */
 export default function FeatureItem(props) {
   return (
     <div className="feature-item">
