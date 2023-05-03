@@ -1,4 +1,4 @@
-# SportSee
+# Argent Bank
 
 Projet n°13 du [parcours Développeur d'Application - JavaScript React](https://openclassrooms.com/fr/paths/516-developpeur-dapplication-javascript-react) d'OpenClassrooms : _Utilisez une API pour un compte utilisateur bancaire avec React_.
 
